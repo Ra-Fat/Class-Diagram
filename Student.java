@@ -8,10 +8,11 @@ public class Student extends Person {
     private double gpa;
     private List<String> enrolledCourses;
 
-    public Student(String id, String name, String email, String phone, int age, String gender, String address,
+    public Student(String id, String firstName, String lastName, String DOB,
+                   String email, String phone, String gender, String address,
                    String studentId, String major, int year, double gpa) {
 
-        super(id, name, email, phone, age, gender, address);
+        super(id, firstName, lastName, DOB, email, phone, gender, address);
         this.studentId = studentId;
         this.major = major;
         this.year = year;
@@ -19,11 +20,16 @@ public class Student extends Person {
         this.enrolledCourses = new ArrayList<>();
     }
 
-    public void getStudentInfo() {}
+    public void getStudentInfo() {
+    }
 
-    public void updateStudentInfo() {}
+    public void updateStudentInfo() {
+    }
 
-    public boolean hasHonor() {return gpa >= 3.5;}
+    public boolean hasHonor() {
+        return gpa >= 3.5;
+    }
 
-    
+    public void viewResource() {
+    }
 }

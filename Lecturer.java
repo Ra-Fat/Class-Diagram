@@ -4,51 +4,38 @@ import java.util.List;
 public class Lecturer extends Person {
     protected String lecturerId;
     protected String department;
+    protected String position;
+    protected String hireDate;
     protected List<String> coursesTaught;
-    protected String officeHours;  // e.g., "Mon 2-4pm, Wed 10-12am"
 
-    public Lecturer(String id, String name, String email, String phone, int age, String gender, String address,
-                    String lecturerId, String department) {
-        super(id, name, email, phone, age, gender, address);
+    public Lecturer(String id, String firstName, String lastName, String DOB,
+                    String email, String phone, String gender, String address,
+                    String lecturerId, String department, String position, String hireDate) {
+
+        super(id, firstName, lastName, DOB, email, phone, gender, address);
         this.lecturerId = lecturerId;
         this.department = department;
+        this.position = position;
+        this.hireDate = hireDate;
         this.coursesTaught = new ArrayList<>();
-        this.officeHours = "";
     }
 
-    public String getLecturerId() {
-        return lecturerId;
+    public void getLecturerInfo() {
     }
 
-    public void updateLecturerId(String newLecturerId) {
-        this.lecturerId = newLecturerId;
+    public void updateLecturerInfo() {
     }
 
-    public String getDepartment() {
-        return department;
+    public void checkAttendance() {
     }
 
     public void updateDepartment(String newDepartment) {
         this.department = newDepartment;
     }
 
-    public List<String> getCoursesTaught() {
-        return coursesTaught;
-    }
-
     public void addCourse(String courseCode) {
-        if (!coursesTaught.contains(courseCode)) {
-            coursesTaught.add(courseCode);
-        }
     }
 
     public void removeCourse(String courseCode) {
-        coursesTaught.remove(courseCode);
-    }
-
-
-    public void updateContactInfo(String newEmail, String newPhone) {
-        updateEmail(newEmail);
-        updatePhone(newPhone);
     }
 }
