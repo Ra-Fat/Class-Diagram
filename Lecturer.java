@@ -46,16 +46,6 @@ public class Lecturer extends Person {
         coursesTaught.remove(courseCode);
     }
 
-    public String getLecturerInfo() {
-        return name + " [" + lecturerId + "] - Department: " + department +
-               "\nCourses: " + (coursesTaught.isEmpty() ? "None" : String.join(", ", coursesTaught)) +
-               "\nOffice Hours: " + (officeHours.isEmpty() ? "Not Set" : officeHours);
-    }
-
-    @Override
-    public String getContactInfo() {
-        return super.getContactInfo() + " | Department: " + department;
-    }
 
     public void updateContactInfo(String newEmail, String newPhone) {
         updateEmail(newEmail);

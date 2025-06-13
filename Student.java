@@ -19,43 +19,11 @@ public class Student extends Person {
         this.enrolledCourses = new ArrayList<>();
     }
 
-    public void enrollCourse(String courseName) {
-        if (!enrolledCourses.contains(courseName)) {
-            enrolledCourses.add(courseName);
-        }
-    }
+    public void getStudentInfo() {}
 
-    public void dropCourse(String courseName) {
-        enrolledCourses.remove(courseName);
-    }
+    public void updateStudentInfo() {}
 
-    public List<String> getEnrolledCourses() {
-        return enrolledCourses;
-    }
+    public boolean hasHonor() {return gpa >= 3.5;}
 
-    public void updateMajor(String newMajor) {
-        this.major = newMajor;
-    }
-
-    public void updateYear(int newYear) {
-        this.year = newYear;
-    }
-
-    public String getStudentInfo() {
-        return name + " [" + studentId + "] - Major: " + major + ", Year: " + year + ", GPA: " + gpa;
-    }
-
-    public double getGPA() {
-        return gpa;
-    }
-
-    public void updateGPA(double newGPA) {
-        if (newGPA >= 0.0 && newGPA <= 4.0) {
-            this.gpa = newGPA;
-        }
-    }
-
-    public boolean hasHonor() {
-        return gpa >= 3.5;
-    }
+    
 }

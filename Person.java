@@ -17,36 +17,17 @@ public abstract class Person {
         this.address = address;
     }
 
-    public String getContactInfo() {
-        return name + " - " + email + " - " + phone;
+    public String getFullName() {
+        return "";
     }
 
-    public void updateEmail(String newEmail) {
-        this.email = newEmail;
-    }
+    public void updateInfo() {}
 
-    public void updatePhone(String newPhone) {
-        this.phone = newPhone;
-    }
+    public int getAge() {return 0;}
 
-    public void updateAddress(String newAddress) {
-        this.address = newAddress;
-    }
+    public void displayProfile() {}
 
-    public void updateAllInfo(String newName, String newEmail, String newPhone, int newAge, String newGender, String newAddress) {
-        this.name = newName;
-        this.email = newEmail;
-        this.phone = newPhone;
-        this.age = newAge;
-        this.gender = newGender;
-        this.address = newAddress;
-    }
-
-    public String generateBirthdayGreeting() {
-        return "Happy Birthday, " + name + "!";
-    }
-
-    public boolean isAdult() {
-        return age >= 18;
+    private boolean  validateInfo() {
+        return false;
     }
 }
